@@ -48,6 +48,10 @@
     text-align: center;
 }
 
+#about > .col > h2 {
+    margin-bottom: 3%;
+}
+
 #contact {
     margin: 10% 7%;
 }
