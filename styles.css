@@ -24,6 +24,7 @@
     margin-bottom: 2%;
 }
 
+/* Cards */
 .card {
     margin: 0 auto;
 }
@@ -48,7 +49,7 @@
     text-align: center;
 }
 
-#about > .col > h2 {
+#about>.col>h2 {
     margin-bottom: 3%;
 }
 
