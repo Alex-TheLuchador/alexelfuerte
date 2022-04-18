@@ -1,13 +1,20 @@
-let counterContainer = document.getElementById("counter");
-let visitCount = localStorage.getItem("page_view");
+window.addEventListener("DOMContentLoaded", (event) => {
+    getVisitorCount();
+});
 
-// localStorage entry will be absent on first viewing
-if (!visitCount) {
-    visitCount = 1;
-    localStorage.setItem("page_view", 1);
-} else {
-    visitCount = Number(visitCount) + 1;
-    localStorage.setItem("page_view", visitCount);
+const functionAPI = "http://localhost:7071/api/GetPortfolioCounter";
+
+const getVisitorCount = () => {
+    let count = 30;
+    fetch(functionAPI).then(response => {
+        return response.json()
+    }).then(response => {
+        console.log("The website has called the function API...");
+        count = response.count;
+        document.getElementById("counter").innerText = count;
+    }).catch(function(error) {
+        console.log(error);
+    });
+
+    return count;
 }
-
-counterContainer.innerHTML = visitCount;
