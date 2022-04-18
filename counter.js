@@ -2,7 +2,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
     getVisitorCount();
 });
 
-const functionAPI = "http://localhost:7071/api/GetPortfolioCounter";
+const functionAPI = "https://getportfoliocounter.azurewebsites.net/api/GetPortfolioCounter?code=CEMKfDTE0Y1gA5TBEtzRThHxa3/s1IfhQOICcrdPdGXeWVX7bk6F1g==";
+const localFunctionAPI = "http://localhost:7071/api/GetPortfolioCounter";
 
 const getVisitorCount = () => {
     let count = 30;
