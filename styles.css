@@ -150,8 +150,17 @@
     margin-top: 1.75%;
 }
 
+#read-blog {
+    text-align: center;
+}
+
+#read-blog>.col>p {
+    margin-top: 2%;
+}
+
 #counter-wrapper {
     text-align: center;
+    margin-top: 7%;
 }
 
 #counter {
